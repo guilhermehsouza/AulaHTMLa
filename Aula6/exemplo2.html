@@ -5,94 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+
         h1
         {
-            color : white;
-            background-color: cornflowerblue;
-            text-align: center;
-            border : 2px solid red;
+            color : magenta;
+        }
+
+        th
+        {
+            background-color: yellow;
+            color : red;
         }
 
         table, th, td
         {
-            border : 1px solid cornflowerblue;
+            border : 1px solid black;
             border-collapse: collapse;
             padding: 5px;
         }
+
     </style>
 </head>
 <body>
+    
     <h1>Exemplo 2</h1>
+
     <p>
-        Neste exemplo vamos continuar estudando tabelas,
-        mas vamos mesclar as células.
+        Estudo de tabela com linha e colunas mescladas, utilizando o rowspan e o colspan, respectivamente.
     </p>
 
     <table>
         <tr>
-            <th>Nome do Aluno</th>
-            <th>Disciplina</th>
-            <th>Nota</th>
-            <th>Falta</th>
+            <th colspan="4">Exemplo 2</th>
         </tr>
 
         <tr>
-            <td>Guilherme</td>
-            <td>Português</td>
-            <td>MB</td>
-            <td>5</td>
+            <th>Coluna 1</th>
+            <th>Coluna 2</th>
+            <th>Coluna 3</th>
+            <th>Coluna 4</th>
         </tr>
 
         <tr>
-            <td>Gustavo</td>
-            <td>Matemática</td>
-            <td>B</td>
-            <td>10</td>
+            <td>Valor 1</td>
+            <td>Valor 2</td>
+            <td>Valor 3</td>
+            <td>Valor4 </td>
         </tr>
 
         <tr>
-            <td>Felipe</td>
-            <td colspan="3">Aluno não matriculado</td>
+            <td colspan="2">Valor 1</td>
+            <td>Valor 2</td>
+            <td>Valor 3</td>
         </tr>
 
         <tr>
-            <td colspan="2">Helena da Silva Souza</td>
-            <td colspan="2">Não Avaliado</td>
+            <td>Valor 1</td>
+            <td colspan="2">Valor 2</td>
+            <td>Valor 3</td>
         </tr>
 
         <tr>
-            <td colspan="4">Aluno não matriculado</td>
+            <td>Valor 1</td>
+            <td colspan="3">Valor 2</td>
         </tr>
 
         <tr>
-            <td rowspan="2">Ana Julia</td>
-            <td>Geografia</td>
-            <td>MB</td>
-            <td>5</td>
+            <td rowspan="2">Valor 1</td>
+            <td>Valor 2</td>
+            <td>Valor 3</td>
+            <td>Valor 4</td>
         </tr>
 
         <tr>
-            <td style="color : red">História</td>
-            <td>B</td>
-            <td>7</td>
+            <td>Valor 2</td>
+            <td rowspan="2">Valor 3</td>
+            <td>Valor 4</td>
         </tr>
 
         <tr>
-           <td style="background-color: cornflowerblue;">Lucas</td>
-           <td rowspan="2">Matemática</td>
-           <td>MB</td>
-           <td rowspan="2">2</td>
+            <td>Valor 1</td>
+            <td>Valor 2</td>
+            <td>Valor 4</td>
         </tr>
-
-        <tr>
-            <td>Luis</td>
-
-            <td>B</td>
-
-        </tr>
-
     </table>
-    
 
 </body>
 </html>
