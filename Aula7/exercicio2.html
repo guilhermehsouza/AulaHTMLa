@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exercício 2 - Tabela estilizada com cores e classes</title>
+  <style>
+    /* Baseado no exemplo5: bordas vermelhas e colapso; e nos demais: uso de cores */
+    body {
+      margin: 0;
+      padding: 16px;
+      background-color: rgb(200, 200, 200);
+      color: rgb(96, 0, 0);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h1 {
+      margin: 0 0 16px 0;
+      color: red;
+      background-color: yellow;
+      text-align: center;
+      padding: 22px;
+    }
+
+    .negrito { font-weight: bold; }
+    .italico { font-style: italic; }
+    .sublinhado { text-decoration: underline; }
+    .destaque { background-color: yellow; border: 1px solid red; }
+
+    .caixa {
+      background-color: #fff;
+      border: 1px solid #bbb;
+      padding: 16px;
+      border-radius: 6px;
+      margin: 16px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse; /* como no exemplo5 */
+      margin-top: 10px;
+      background-color: #fff;
+    }
+
+    table, th, td {
+      border: 1px solid red; /* como no exemplo5 */
+      padding: 8px;
+    }
+
+    thead th {
+      background-color: rgb(96, 0, 0);
+      color: white;
+    }
+
+    /* Linhas alternadas para leitura (pseudo-classes estruturais) */
+    tbody tr:nth-child(odd) {
+      background-color: #ffeaea;
+    }
+    tbody tr:nth-child(even) {
+      background-color: #eaffea;
+    }
+
+    /* Destacar célula específica com a classe já conhecida */
+    td.destaque {
+      background-color: yellow;
+      border: 2px dashed red;
+      font-weight: bold;
+    }
+
+    caption {
+      caption-side: top;
+      text-align: left;
+      font-weight: bold;
+      padding: 6px 0;
+      color: rgb(96, 0, 0);
+    }
+
+    /* Interação ao passar o mouse sobre a linha */
+    tbody tr:hover {
+      outline: 2px solid magenta;
+      outline-offset: -2px;
+    }
+
+    .legenda {
+      font-size: 0.95rem;
+      color: #333;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Exercício 2: Tabela estilizada com cores e classes</h1>
+
+  <section class="caixa">
+    <h2>1) Monte e estilize a tabela</h2>
+    <p>
+      A tabela a seguir utiliza cabeçalho destacado, linhas alternadas e células com classe <code>.destaque</code>.
+      Observe as bordas vermelhas e o colapso de bordas, como visto no exemplo5.
+    </p>
+
+    <table>
+      <caption>Estoque de Produtos</caption>
+      <thead>
+        <tr>
+          <th>Produto</th>
+          <th>Categoria</th>
+          <th>Preço</th>
+          <th>Disponibilidade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="negrito">Mouse</td>
+          <td>Periféricos</td>
+          <td>R$ 80,00</td>
+          <td>Em estoque</td>
+        </tr>
+        <tr>
+          <td>Teclado</td>
+          <td>Periféricos</td>
+          <td class="destaque">R$ 120,00</td>
+          <td>Fora de estoque</td>
+        </tr>
+        <tr>
+          <td class="italico">Monitor</td>
+          <td>Display</td>
+          <td>R$ 850,00</td>
+          <td class="sublinhado">Em reposição</td>
+        </tr>
+        <tr>
+          <td>Headset</td>
+          <td>Áudio</td>
+          <td>R$ 210,00</td>
+          <td>Em estoque</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      Tarefas:
+      <ul>
+        <li>Adicione duas novas linhas de produtos e aplique <code>.negrito</code>, <code>.italico</code>, <code>.sublinhado</code> conforme desejar.</li>
+        <li>Aplique a classe <code>.destaque</code> em uma célula diferente e observe o efeito.</li>
+      </ul>      
+    </p>
+  </section>
+</body>
+</html>
