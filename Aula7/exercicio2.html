@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2 - CSS Avançado</title>
+    <style>
+        /* Reset básico */
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: rgb(245, 245, 245);
+            color: rgb(50, 50, 50);
+        }
+
+        /* Estilização do cabeçalho */
+        header {
+            background-color: rgb(76, 175, 80);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        /* Navegação */
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            color: rgb(255, 255, 150);
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border: 2px solid transparent;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            border-color: white;
+            background-color: rgba(255,255,255,0.2);
+        }
+
+        /* Classes para formatação de texto */
+        .negrito {
+            font-weight: bold;
+        }
+
+        .italico {
+            font-style: italic;
+        }
+
+        .sublinhado {
+            text-decoration: underline;
+        }
+
+        .destaque {
+            background-color: yellow;
+            border: 2px solid rgb(255, 0, 0);
+            padding: 3px;
+            border-radius: 3px;
+        }
+
+        .destaque-azul {
+            background-color: rgb(173, 216, 230);
+            color: rgb(0, 0, 139);
+            padding: 5px;
+        }
+
+        .texto-grande {
+            font-size: 24px;
+        }
+
+        .texto-pequeno {
+            font-size: 14px;
+            color: rgb(100, 100, 100);
+        }
+
+        /* Seções */
+        section {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        section h2 {
+            color: rgb(76, 175, 80);
+            border-bottom: 3px solid rgb(76, 175, 80);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Caixas de exercício */
+        .caixa {
+            border: 2px solid rgb(170, 170, 170);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            background-color: rgb(248, 248, 248);
+        }
+
+        .caixa-colorida {
+            border: 3px solid rgb(255, 140, 0);
+            padding: 20px;
+            margin: 15px 0;
+            background-color: rgb(255, 248, 220);
+            text-align: center;
+        }
+
+        /* Botões */
+        .botao {
+            background-color: rgb(0, 140, 186);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+
+        .botao-verde {
+            background-color: rgb(76, 175, 80);
+        }
+
+        .botao-vermelho {
+            background-color: rgb(244, 67, 54);
+        }
+
+        /* Listas */
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 8px 0;
+            font-size: 18px;
+        }
+
+        .lista-especial li {
+            background-color: rgb(230, 230, 230);
+            padding: 10px;
+            margin: 5px 0;
+            border-left: 4px solid rgb(76, 175, 80);
+        }
+
+        /* Tabelas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 2px solid rgb(76, 175, 80);
+        }
+
+        th {
+            background-color: rgb(76, 175, 80);
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        /* Linha zebrada para tabela */
+        tr:nth-child(even) {
+            background-color: rgb(240, 240, 240);
+        }
+
+        /* Formulário */
+        .formulario {
+            background-color: rgb(250, 250, 250);
+            padding: 20px;
+            border: 2px solid rgb(200, 200, 200);
+            border-radius: 8px;
+        }
+
+        .formulario input, .formulario select, .formulario textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid rgb(200, 200, 200);
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .formulario label {
+            font-weight: bold;
+            color: rgb(76, 175, 80);
+        }
+
+        /* Assinatura */
+        .assinatura {
+            text-align: right;
+            font-style: italic;
+            color: rgb(100, 100, 100);
+            margin-top: 30px;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            text-align: center;
+            background-color: rgb(96, 0, 0);
+            color: white;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Exercício 2 - CSS Avançado</h1>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Exercícios</a>
+            <a href="#">Exemplos</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>1. Formatação de Texto com Spans</h2>
+        <p class="caixa">
+            Neste exercício você deve aplicar diferentes formatações usando spans. Por exemplo:
+            <span class="negrito">texto em negrito</span>, 
+            <span class="italico">texto em itálico</span>, 
+            <span class="sublinhado">texto sublinhado</span>, e 
+            <span class="negrito italico destaque">combinações múltiplas</span>.
+        </p>
+        
+        <div class="caixa-colorida">
+            <p class="texto-grande">
+                Bem-vindo ao <span class="destaque-azul negrito">Exercício Avançado de CSS</span>!
+            </p>
+            <p class="texto-pequeno">
+                Este exercício combina vários conceitos de estilização.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Botões Estilizados</h2>
+        <p>Experimente diferentes estilos de botões:</p>
+        <button class="botao">Botão Padrão</button>
+        <button class="botao botao-verde">Botão Verde</button>
+        <button class="botao botao-vermelho">Botão Vermelho</button>
+    </section>
+
+    <section>
+        <h2>3. Lista com Estilo Especial</h2>
+        <p>Lista normal:</p>
+        <ul>
+            <li>HTML - <span class="italico">HyperText Markup Language</span></li>
+            <li>CSS - <span class="negrito">Cascading Style Sheets</span></li>
+            <li>JavaScript - <span class="sublinhado">Linguagem de Programação</span></li>
+        </ul>
+
+        <p>Lista com estilo especial:</p>
+        <ul class="lista-especial">
+            <li><span class="negrito">Frontend:</span> HTML, CSS, JavaScript</li>
+            <li><span class="negrito">Backend:</span> PHP, Python, Java</li>
+            <li><span class="negrito">Banco de Dados:</span> MySQL, PostgreSQL</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>4. Tabela Avançada com Cores</h2>
+        <table>
+            <tr>
+                <th>Estudante</th>
+                <th>Curso</th>
+                <th>Cidade</th>
+                <th>Estado</th>
+            </tr>
+            <tr>
+                <td><span class="negrito">Ana Silva</span></td>
+                <td class="italico">Informática para Internet</td>
+                <td>Mococa</td>
+                <td><span class="destaque">SP</span></td>
+            </tr>
+            <tr>
+                <td><span class="negrito">Carlos Santos</span></td>
+                <td class="italico">Desenvolvimento de Sistemas</td>
+                <td><span class="sublinhado">Guaxupé</span></td>
+                <td><span class="destaque-azul">MG</span></td>
+            </tr>
+            <tr>
+                <td><span class="negrito">Maria Oliveira</span></td>
+                <td class="italico">Design Gráfico</td>
+                <td>São Paulo</td>
+                <td><span class="destaque">SP</span></td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>5. Formulário Estilizado</h2>
+        <div class="formulario">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo">
+            
+            <label for="curso">Curso:</label>
+            <select id="curso" name="curso">
+                <option value="">Selecione um curso</option>
+                <option value="info">Informática para Internet</option>
+                <option value="dev">Desenvolvimento de Sistemas</option>
+                <option value="design">Design Gráfico</option>
+            </select>
+            
+            <label for="comentarios">Comentários:</label>
+            <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escreva seus comentários aqui..."></textarea>
+            
+            <button class="botao botao-verde">Enviar</button>
+        </div>
+    </section>
+
+    <section>
+        <h2>6. Desafio: Crie Suas Próprias Classes</h2>
+        <div class="caixa">
+            <p><strong>Instruções:</strong></p>
+            <ul>
+                <li>Crie uma classe chamada <code>.texto-centralizado</code> que centralize o texto</li>
+                <li>Crie uma classe chamada <code>.borda-colorida</code> que adicione uma borda colorida</li>
+                <li>Crie uma classe chamada <code>.sombra</code> que adicione sombra ao texto</li>
+                <li>Combine essas classes em diferentes elementos</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="assinatura">
+        <p class="negrito">Exercício elaborado para prática de CSS avançado</p>
+    </div>
+
+    <footer>
+        <p><span class="negrito">ETEC Francisco Garcia</span> - Curso Técnico em Informática para Internet</p>
+        <p class="texto-pequeno">Material didático para estudo de CSS</p>
+    </footer>
+
+</body>
+</html>
